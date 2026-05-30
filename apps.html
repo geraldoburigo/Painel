@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferramentas — Geraldo Búrigo</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #0d0d0d;
+  --bg2:     #141414;
+  --bg3:     #1c1c1c;
+  --border:  #2e2e2e;
+  --border2: #3a3a3a;
+  --text:    #f5f3ee;
+  --muted:   #c8c4bc;
+  --muted2:  #9a9690;
+  --accent:  #a3e635;
+  --mono:    'JetBrains Mono', monospace;
+  --r:       8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--mono);
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:3rem 1.5rem;
+}
+.page{width:100%;max-width:780px}
+
+header{text-align:center;margin-bottom:3rem}
+.h-tag{font-size:13px;color:var(--muted2);letter-spacing:.06em;margin-bottom:.5rem}
+h1{font-size:26px;font-weight:500;color:var(--text);letter-spacing:-.02em;margin-bottom:.4rem}
+.h-by{font-size:14px;color:var(--accent);margin-bottom:.3rem}
+.h-sub{font-size:13px;color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  overflow:hidden;
+}
+
+.card{
+  background:var(--bg2);
+  padding:1.75rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  text-decoration:none;
+  transition:background .15s;
+  position:relative;
+}
+.card:hover{background:var(--bg3)}
+.card:hover .card-arrow{opacity:1;transform:translate(2px,-2px)}
+
+.card-tag{
+  font-size:11px;letter-spacing:.08em;color:var(--muted2);
+}
+.card-title{
+  font-size:18px;font-weight:500;color:var(--accent);
+  letter-spacing:-.01em;line-height:1.3;
+}
+.card-desc{
+  font-size:13px;color:var(--muted);line-height:1.6;flex:1;
+}
+.card-arrow{
+  position:absolute;top:1.5rem;right:1.5rem;
+  font-size:16px;color:var(--muted2);
+  opacity:0;transition:opacity .15s,transform .15s;
+}
+.card-footer{
+  font-size:11px;color:var(--muted2);
+  padding-top:.5rem;border-top:1px solid var(--border);
+  letter-spacing:.03em;
+}
+
+footer{
+  font-size:12px;color:var(--muted2);
+  text-align:center;margin-top:2.5rem;
+  letter-spacing:.03em;
+}
+
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="h-tag">// ferramentas financeiras</div>
+    <h1>Calculadoras &amp; Simuladores</h1>
+    <p class="h-by">by Geraldo Búrigo, CNPI</p>
+    <p class="h-sub">ferramentas gratuitas para tomar melhores decisões financeiras</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="https://simulador-imovel-hb9v.vercel.app/" target="_blank">
+      <span class="card-arrow">↗</span>
+      <div class="card-tag">// financiamento</div>
+      <div class="card-title">Simulador Imóvel</div>
+      <div class="card-desc">Compare financiamento imobiliário e consórcio lado a lado — veja qual opção faz mais sentido para o seu perfil e prazo.</div>
+      <div class="card-footer">simulador-imovel · vercel.app</div>
+    </a>
+
+    <a class="card" href="https://planejamento-financeiro-six.vercel.app/" target="_blank">
+      <span class="card-arrow">↗</span>
+      <div class="card-tag">// acumulação</div>
+      <div class="card-title">Planejamento Financeiro</div>
+      <div class="card-desc">Simule a acumulação de patrimônio e o usufruto ao longo do tempo — projete sua independência financeira com clareza.</div>
+      <div class="card-footer">planejamento-financeiro · vercel.app</div>
+    </a>
+
+    <a class="card" href="https://diferimento.vercel.app/" target="_blank">
+      <span class="card-arrow">↗</span>
+      <div class="card-tag">// imposto</div>
+      <div class="card-title">Diferimento de IR</div>
+      <div class="card-desc">Veja o impacto real do pagamento antecipado de imposto e taxa de administração — compare CDB, Tesouro, Fundo e ETF.</div>
+      <div class="card-footer">diferimento · vercel.app</div>
+    </a>
+
+    <a class="card" href="https://pgbl.vercel.app/" target="_blank">
+      <span class="card-arrow">↗</span>
+      <div class="card-tag">// previdência</div>
+      <div class="card-title">Calculadora PGBL</div>
+      <div class="card-desc">Calcule o benefício fiscal do PGBL — descubra quanto você economiza no IR e o impacto do diferimento no longo prazo.</div>
+      <div class="card-footer">pgbl · vercel.app</div>
+    </a>
+
+  </div>
+
+  <footer>ferramentas educacionais · não constituem recomendação de investimento</footer>
+</div>
+</body>
+</html>
