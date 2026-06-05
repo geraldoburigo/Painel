@@ -41,7 +41,7 @@ h1{font-size:26px;font-weight:500;color:var(--text);letter-spacing:-.02em;margin
 
 .grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr;
   gap:1px;
   background:var(--border);
   border:1px solid var(--border);
@@ -62,12 +62,23 @@ h1{font-size:26px;font-weight:500;color:var(--text);letter-spacing:-.02em;margin
 .card:hover{background:var(--bg3)}
 .card:hover .card-arrow{opacity:1;transform:translate(2px,-2px)}
 
+.card.empty{
+  background:var(--bg);
+  cursor:default;
+  opacity:.35;
+}
+.card.empty:hover{background:var(--bg)}
+.card.empty .card-arrow{display:none}
+
 .card-tag{
   font-size:11px;letter-spacing:.08em;color:var(--muted2);
 }
 .card-title{
-  font-size:18px;font-weight:500;color:var(--accent);
+  font-size:17px;font-weight:500;color:var(--accent);
   letter-spacing:-.01em;line-height:1.3;
+}
+.card.empty .card-title{
+  color:var(--muted2);
 }
 .card-desc{
   font-size:13px;color:var(--muted);line-height:1.6;flex:1;
@@ -89,7 +100,10 @@ footer{
   letter-spacing:.03em;
 }
 
-@media(max-width:560px){
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:420px){
   .grid{grid-template-columns:1fr}
   h1{font-size:22px}
 }
@@ -123,9 +137,9 @@ footer{
 
     <a class="card" href="https://diferimento.vercel.app/" target="_blank">
       <span class="card-arrow">↗</span>
-      <div class="card-tag">// imposto e taxa de administração</div>
-      <div class="card-title">Diferimento do IR e Taxa de Administração</div>
-      <div class="card-desc">Veja o impacto real do pagamento antecipado de imposto e taxa de administração — compare CDB, Tesouro, Fundo e ETF.</div>
+      <div class="card-tag">// imposto</div>
+      <div class="card-title">Diferimento do IR</div>
+      <div class="card-desc">Veja o impacto real do pagamento antecipado de imposto e taxa de administração — compare CDB, Tesouro, Fundo, ETF e Previdência.</div>
     </a>
 
     <a class="card" href="https://pgbl.vercel.app/" target="_blank">
@@ -134,6 +148,19 @@ footer{
       <div class="card-title">Calculadora PGBL</div>
       <div class="card-desc">Calcule o benefício fiscal do PGBL — descubra quanto você economiza no IR e o impacto do diferimento no longo prazo.</div>
     </a>
+
+    <a class="card" href="#" target="_blank">
+      <span class="card-arrow">↗</span>
+      <div class="card-tag">// taxa de administração</div>
+      <div class="card-title">Efeito da Taxa de Administração</div>
+      <div class="card-desc">Descubra quanto das suas rentabilidade você realmente guarda — veja o impacto real das taxas sobre o patrimônio ao longo do tempo.</div>
+    </a>
+
+    <div class="card empty">
+      <div class="card-tag">// em breve</div>
+      <div class="card-title">Nova Ferramenta</div>
+      <div class="card-desc">Em desenvolvimento.</div>
+    </div>
 
   </div>
 
